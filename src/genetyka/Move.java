@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Move {
 
 
-    public static int Zamek() {
+    public static boolean Zamek() {
         Scanner scanner = new Scanner(System.in);
         String a = scanner.nextLine();
 
@@ -16,80 +16,77 @@ public class Move {
         switch (a) {
             case "otworz drzwi":
                 System.out.println("Drzwi sa zamkniete bedziesz potrzebowal klucza");
-                return 0;
+                return false;
 
             case "zapukaj":
                 System.out.println("Nikt nie odpowiada");
-                return 0;
+                return false;
 
             case "wywarz drzwi":
                 System.out.println("Jestes na to zbyt slaby...");
-                return 0;
+                return false;
 
             case "idz na wschod":
-                System.out.println("Widzisz stara studnie");
-                System.out.println("tutaj wlatuje nowa klasa");
-                return 1;
+                Move.Studnia();
+                return true;
 
             case "idz na zachod":
                 System.out.println("napotykasz stary zaniedbany cmentarz");
                 System.out.println("tu wbija nowa klasa");
-                return 2;
+                return false;
 
             case "idz na polnoc":
                 System.out.println("debilu stoisz na wrost zamku");
-                return 3;
+                return false;
 
             case "zawroc":
                 System.out.println("nie masz dokad wracac");
-                return 0;
+                return false;
 
             default:
                 System.out.println("Co Ty odpierdalasz ?");
-                return 0;
+                return false;
         }
     }
 
-    public static int Studnia() {
+    public static boolean Studnia() {
+        System.out.println("Podazajac na wschod widzisz duzy plac a na jego srodku studnie");
         Scanner scanner = new Scanner(System.in);
         String b = scanner.nextLine();
-        System.out.println("Studnia");
+
 
 
         switch (b) {
-            case "otworz drzwi":
-                System.out.println("Drzwi sa zamkniete bedziesz potrzebowal klucza");
-                return 0;
+            case "podejdz":
+                System.out.println("Podchodzisz do studni, widzisz stare wiaderko przymocowane lina do kolowrotka");
+                return false;
 
-            case "zapukaj":
-                System.out.println("Nikt nie odpowiada");
-                return 0;
+            case "zagladnij do srodka":
+                System.out.println("w ciemnosci studni widzisz maleniki blysk");
+                return false;
 
-            case "wywarz drzwi":
-                System.out.println("Jestes na to zbyt slaby...");
-                return 0;
+            case "nabierz wody":
+                System.out.println("nabierasz wody w srodku wiaderka dostrzegasz klucz");
+                return false;
 
             case "idz na wschod":
                 System.out.println("Widzisz stara studnie");
                 System.out.println("tutaj wlatuje nowa klasa");
-                return 1;
+                return false;
 
-            case "idz na zachod":
-                System.out.println("napotykasz stary zaniedbany cmentarz");
-                System.out.println("tu wbija nowa klasa");
-                return 2;
+            case "wez klucz":
+                System.out.println("Zabierasz klucz");
+                return false;
 
-            case "idz na polnoc":
-                System.out.println("debilu stoisz na wrost zamku");
-                return 3;
+            case "wroc do zamku":
+                System.out.println("Wracasz do zamku");
+                Move.Zamek();
+                return true;
 
-            case "zawroc":
-                System.out.println("nie masz dokad wracac");
-                return 0;
 
             default:
                 System.out.println("Co Ty odpierdalasz ?");
-                return 0;
+                return false;
         }
     }
 }

@@ -14,16 +14,17 @@ public class Start {
         System.out.println("Na wprost Ciebie sa ogromne drzwi.");
         System.out.println("Co robisz ?");
 
-        int studnia = Move.Zamek();
+        boolean studnia = Move.Zamek();
 
-        if(studnia==0) {
+        while(!studnia==true) {
             Move.Zamek();
         }
-        if (studnia==1){
+
+        /*if (studnia==1){
             System.out.println("chuj");
             Move.Studnia();
         }
-        System.out.println("chuj2");
+        System.out.println("chuj2");*/
     }
 }
 
