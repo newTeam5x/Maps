@@ -7,7 +7,8 @@ import java.util.Scanner;
  */
 public class Move {
 
-    public static int Run() {
+
+    public static int Zamek() {
         Scanner scanner = new Scanner(System.in);
         String a = scanner.nextLine();
 
@@ -49,7 +50,7 @@ public class Move {
         }
     }
 
-    public static int studnia() {
+    public static int Studnia() {
         Scanner scanner = new Scanner(System.in);
         String b = scanner.nextLine();
         System.out.println("Studnia");
