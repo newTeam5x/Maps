@@ -23,6 +23,7 @@ public class zamek {
             System.out.println("chuj");
             Move.studnia();
         }
+        System.out.println("chuj2");
     }
 }
 
