@@ -13,19 +13,9 @@ public class Start {
         System.out.println("Znajdujesz sie przed zamkiem.");
         System.out.println("Na wprost Ciebie sa ogromne drzwi.");
         System.out.println("Co robisz ?");
-        Move.Zamek();
-        /*
-        boolean zamek = Move.Zamek();
 
-        while(!zamek==true) {
-            Move.Zamek();
-        }
-*/
-        /*if (studnia==1){
-            System.out.println("chuj");
-            Move.Studnia();
-        }
-        System.out.println("chuj2");*/
+        //Lokacja startowa
+        Move.Castle();
     }
 }
 
