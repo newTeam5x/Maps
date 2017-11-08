@@ -13,13 +13,14 @@ public class Start {
         System.out.println("Znajdujesz sie przed zamkiem.");
         System.out.println("Na wprost Ciebie sa ogromne drzwi.");
         System.out.println("Co robisz ?");
+        Move.Zamek();
+        /*
+        boolean zamek = Move.Zamek();
 
-        boolean studnia = Move.Zamek();
-
-        while(!studnia==true) {
+        while(!zamek==true) {
             Move.Zamek();
         }
-
+*/
         /*if (studnia==1){
             System.out.println("chuj");
             Move.Studnia();
