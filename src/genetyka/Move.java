@@ -29,13 +29,13 @@ public class Move {
                 return false;
 
             case "idz na wschod":
+                System.out.println("Podazajac na wschod widzisz duzy plac a na jego srodku studnie");
                 Move.Studnia();
                 return true;
 
             case "idz na zachod":
                 System.out.println("napotykasz stary zaniedbany cmentarz");
                 System.out.println("tu wbija nowa klasa");
-                System.out.println("Podazajac na wschod widzisz duzy plac a na jego srodku studnie");
                 Zamek(); //Tymczasowo
                 return false;
 
