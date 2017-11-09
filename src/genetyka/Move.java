@@ -8,48 +8,44 @@ import java.util.Scanner;
 public class Move {
 
 
-    public static void Castle() {
+    public static void Camp() {
         Scanner scanner = new Scanner(System.in);
         String a = scanner.nextLine();
 
         switch (a) {
             case "idz na polnoc":
-                System.out.println("debilu stoisz na wrost zamku");
-                Castle();
+                System.out.println("Droga jest zablokowana przez haszcze,");
+                System.out.println("jedyna opcja na przedostanie sie dalej");
+                System.out.println("to spalenie ich. Niestety nie posiadasz");
+                System.out.println("zadnego przedmiotu ktory by to umozliwial,");
+                System.out.println("wroc kiedy taki zdobedziesz.");
+                Camp();
 
             case "idz na poludnie":
-                System.out.println("Wchodzisz do lasu");
-                System.out.println("Co jakis czas widac dziwne migotanie swiatla w oddali");
-                Forest();
+                System.out.println("Widzisz pobojowiski z setkami zwlok.");
+                System.out.println("To tutaj stoczyla sie walka Twoich wrogow");
+                System.out.println("i ludzi ktorzy Cie uwolnili.");
+                Fild();
 
             case "idz na wschod":
                 System.out.println("Podazajac na wschod widzisz duzy plac a na jego srodku studnie");
                 Move.Well();
 
             case "idz na zachod":
-                System.out.println("napotykasz stary zaniedbany cmentarz");
-                System.out.println("tu wbija nowa klasa");
-                Castle(); //Tymczasowo
+                System.out.println("Wchodzisz na przepiekna lake, w oddali rozciagaja sie pasma gorskie.");
+                Meadow(); //Tymczasowo
 
-            case "otworz drzwi":
-                System.out.println("Drzwi sa zamkniete bedziesz potrzebowal klucza");
-                Castle();
+            case "przeszukaj oboz":
+                System.out.println("Przeszukujesz oboz ale najwyrazniej najezdzcy wszystko zabrali.");
+                Camp();
 
-            case "zapukaj":
-                System.out.println("Nikt nie odpowiada");
-                Castle();
-
-            case "wywarz drzwi":
-                System.out.println("Jestes na to zbyt slaby...");
-                Castle();
-
-            case "zawroc":
-                System.out.println("nie masz dokad wracac");
-                Castle();
+            case "idz spac":
+                System.out.println("Spales wystarczajaca dlugo, czas rozpoczac swoja przygode.");
+                Camp();
 
             default:
                 System.out.println("Co Ty odpierdalasz?");
-                Castle();
+                Camp();
         }
     }
 
@@ -58,30 +54,45 @@ public class Move {
         String a = scanner.nextLine();
 
         switch (a) {
-            case "podejdz":
-                System.out.println("Podchodzisz do studni, widzisz stare wiaderko przymocowane lina do kolowrotka");
+            case "idz na polnoc":
+                System.out.println("Tam nic nie ma, mozesz jedynie zawrocic do obozowiska.");
+                Well();
+
+            case "idz na polodnie":
+                System.out.println("Tam nic nie ma, mozesz jedynie zawrocic do obozowiska.");
+                Well();
+
+            case "idz na wschod":
+                System.out.println("Tam nic nie ma, mozesz jedynie zawrocic do obozowiska.");
+                Well();
+
+            case "idz na zachod":
+                System.out.println("Wracasz to zrujnowanego obozowiska.");
+                Move.Camp();
+
+            case "podejdz do studni":
+                System.out.println("Podchodzisz do studni, widzisz stare wiaderko przymocowane lina do kolowrotka.");
+                System.out.println("Na jedym z kamieni widzisz wyryta cyfre 2 ");
                 Well();
 
             case "zagladnij do srodka":
-                System.out.println("w ciemnosci studni widzisz maleniki blysk");
+                System.out.println("W ciemnosci studni widzisz maleniki blysk");
+                System.out.println("");
                 Well();
 
             case "nabierz wody":
                 System.out.println("nabierasz wody w srodku wiaderka dostrzegasz klucz");
                 Well();
 
-            case "idz na wschod":
-                System.out.println("Widzisz stara studnie");
-                System.out.println("tutaj wlatuje nowa klasa");
-                Well(); //Tymczasowo
-
             case "wez klucz":
                 System.out.println("Zabierasz klucz");
+                System.out.println("item + 1");
                 Well();
 
-            case "wroc do zamku":
-                System.out.println("Wracasz do zamku");
-                Move.Castle();
+            case "Zabierz wiaderko":
+                System.out.println("Zabierasz wiaderko z woda");
+                System.out.println("item + 1");
+                Well();
 
             default:
                 System.out.println("Co Ty odpierdalasz ?");
@@ -89,69 +100,81 @@ public class Move {
         }
     }
 
-    public static void Forest(){
+    public static void Fild() {
         Scanner scanner = new Scanner(System.in);
         String a = scanner.nextLine();
 
         switch (a) {
             case "idz na polnoc":
-                System.out.println("Wracasz do zamku");
-                Castle();
+                System.out.println("Wracasz do zrujnowanego obozowiska.");
+                Move.Camp();
 
             case "idz na poludnie":
-                System.out.println("Idziesz dalej w glab lasu");
-                System.out.println("Kolejny raz widzisz dziwne migotajace swiatlo, ale tym razem wydaje Ci sie, ze jest blizej");
-                DeeperInForest();
-
-            case "idz na wschod":
-                if (Random.RInt(1,10) == 5){
-                    System.out.println("Zaatakowaly Cie dzikie zwierzeta w lesie, umierasz");
-                    System.out.println("/* Poki co spieprzasz do zamku, bo dopiero gre piszemy */");
-                    Move.Castle();
-                }
-                else{
-                    System.out.println("Tam nic nie ma, zostaje na drodze");
-                    Forest();
-                }
+                System.out.println("Na połodnie od pobojowiska jest skarpa,");
+                System.out.println("Jedyne co mozesz zrobic to z niej skoczyc");
+                System.out.println("ale tego osobisicie nie doradzam.");
+                Fild();
 
             case "idz na zachod":
-                System.out.println("Tam nic nie ma, zostaje na drodze");
-                Forest();
+                System.out.println("Tam nic nie ma, mozesz jedynie wrocic do obozowiska.");
+                Camp();
+
+            case "idz na wschod":
+                System.out.println("Tam nic nie ma, mozesz jedynie wrocic do obozowiska.");
+                Camp();
+
+            case "przeszukaj zwloki":
+                System.out.println("Przeszukujac zwloki natrafiasz na kilka mikstur leczniczych");
+                System.out.println("|HP| Potion + 2");
+                Camp();
 
             default:
                 System.out.println("Co Ty odpierdalasz?");
-                Forest();
+                Camp();
         }
     }
 
-    public static void DeeperInForest(){
+    public static void Meadow() {
         Scanner scanner = new Scanner(System.in);
         String a = scanner.nextLine();
 
-        switch (a){
-            case "idz na polnoc":
-                System.out.println("Wracasz sie");
-                Forest();
+        switch (a) {
+            case "idz na wschod":
+                System.out.println("Wracasz sie do zrujnowanego obozowiska");
+                Move.Camp();
 
             case "idz na poludnie":
-                System.out.println("Gdzie leziesz");
-                DeeperInForest();
+                System.out.println("Tam nic nie ma, pozostan na tej drodze.");
+                Meadow();
 
-            case "idz na wschod":
-                System.out.println("Wchodzisz do jaskini");
-                DeeperInForest(); //Pozniej sie zmieni na jakas jaskinie czy cus
+            case "idz na polnoc":
+                System.out.println("Tam nic nie ma, pozostan na tej drodze.");
+                Meadow(); //Pozniej sie zmieni na jakas jaskinie czy cus
 
             case "idz na zachod":
-                System.out.println("Widzisz jakiegos szwaba i go napierdalasz dildosem, ktorego wlasnie wyjales z tylka, podejrzane... #nohomo");
-                DeeperInForest();
+                System.out.println("Wchodzisz do starej jaskini, wyglada na opuszczana.");
+                System.out.println("Miej się na bacznosci nigdy nie wiesz co moze Cie spotkac.");
+                Move.Cave();
 
-            case "szukaj":
-                System.out.println("Chuja widzisz!");
-                DeeperInForest();
+            case "zbieraj kwiatki":
+                System.out.println("Andrzej co Ty pedal jestes ? #nohomo");
+                Meadow();
 
             default:
                 System.out.println("Co Ty odpierdalasz?");
-                DeeperInForest();
+                Meadow();
+        }
+    }
+
+    public static void Cave() {
+        Scanner scanner = new Scanner(System.in);
+        String a = scanner.nextLine();
+        System.out.println("Na tym koniec");
+
+        switch (a) {
+            case "dasdasda":
+                System.out.println("Wracasz sie do zrujnowanego obozowiska");
+                Move.Camp();
         }
     }
 }
