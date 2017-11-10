@@ -8,23 +8,15 @@ import java.util.Scanner;
 public class Start {
 
     public static void main(String[] args) {
-        System.out.println("dasdasda");
         System.out.println("Witaj w Gothic 8 nie arkania");
-        System.out.println("Znajdujesz sie przed zamkiem.");
-        System.out.println("Na wprost Ciebie sa ogromne drzwi.");
+        System.out.println("Twoja przygoda zaczyna sie w zrujnowanym obozowisku,");
+        System.out.println("Byles jencem wojennym a obozowisko Twoich wrogow zostalo zaatakowane.");
+        System.out.println("Budzisz sie rano i jedyne co pamietasz to tajemnicza postac w kapturze,");
+        System.out.println("ktora Cie oswobodzila.");
         System.out.println("Co robisz ?");
 
-        boolean studnia = Move.Zamek();
-
-        while(!studnia==true) {
-            Move.Zamek();
-        }
-
-        /*if (studnia==1){
-            System.out.println("chuj");
-            Move.Studnia();
-        }
-        System.out.println("chuj2");*/
+        //Lokacja startowa
+        Move.Camp();
     }
 }
 
